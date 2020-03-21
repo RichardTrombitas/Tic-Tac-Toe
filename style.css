@@ -1,0 +1,182 @@
+body {
+    background-color: black;
+}
+
+#gameWrapper {
+    position: absolute;
+    background-image: radial-gradient(closest-side, rgb(63, 0, 0),
+    rgba(0,0,0,0));
+    width: 60%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    margin-top: -22.5%;
+    margin-left: -30%;
+    transition: background-image 76s;
+}
+
+.text {
+    text-shadow: 0 0 38px red, 0 0 10px rgb(0, 0, 0);
+    font-family: Helvetica, sans-serif;
+    color: red;
+}
+
+#title {
+    position: absolute;
+    width: 100%;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#boardWrapper {
+    position: absolute;
+    float: left;
+    bottom: 50%;
+    left: 50%;
+    width: 25rem;
+    height: 25rem;
+    margin-bottom: -12.5rem;
+    margin-left: -12.5rem;
+}
+
+#gameBoard {
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+}
+
+#gameBoard td {
+    color: red;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    text-align: center;
+    font-size: 3em;
+    font-family: sans-serif;
+    height: 30%;
+    cursor: default;
+}
+
+td.clickable {
+    cursor: pointer !important;
+}
+
+.hLine {
+    position: absolute;
+    width: 100%;
+    height: 2%;
+    background-image: linear-gradient(to right, rgba(0,0,0,0),red,red,
+    rgba(0,0,0,0));
+}
+
+.vLine {
+    position: absolute;
+    width: 2%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0),red,red,
+    rgba(0,0,0,0));
+}
+
+#hLine1 {
+    top: 32.2%;
+}
+
+#hLine2 {
+    top: 65.4%;
+}
+
+#vLine1 {
+    left: 32.2%;
+}
+
+#vLine2 {
+    left: 65.4%;
+}
+
+.button, .disabled-button {
+    font-size: 30px;
+    font-family: Helvetica, sans-serif;
+    background: none;
+    border: none;
+    transition: all 250ms;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button:hover {
+    text-shadow: 0 0 100px red, 0 0 70px red, 0 0 60px red, 0 0 50px red;
+}
+
+.disabled-button {
+    cursor: default;
+    color: rgba(165, 42, 42, 0.281);
+    text-shadow: none;
+}
+
+#playAsX {
+    z-index: 5;
+    position: absolute;
+    left: 20%;
+    bottom: 6%;
+}
+
+#playAs0Wrapper {
+    position: absolute;
+    bottom: 6%;
+    width: 100%;
+    text-align: center;
+}
+
+#reset {
+    position: absolute;
+    right: 20%;
+    bottom: 6%;
+}
+
+#messageBox {
+    opacity: 0%;
+    display: none;
+    position: fixed;
+    z-index: 10;
+    width: 30rem;
+    height: 10rem;
+    top: 50%;
+    left: 50%;
+    margin-top: -6rem;
+    margin-left: -15rem;
+    background-image: radial-gradient( rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.863));
+    border: 2px solid red;
+    box-shadow: 0 0 5px red;
+    transition: opacity 250ms;
+}
+
+#message {
+    position: absolute;
+    font-size: 1.3em;
+    top: 23%;
+    left: 10%;
+}
+
+#ok {
+    position: absolute;
+    font-size: 1.8em;
+    bottom: 22%;
+    right: 13%;    
+}
+
+#turn {
+    position: absolute;
+    font-size: 2em;
+    right: 0;
+    bottom: 20%;
+    transition: all 500ms;
+}
+
+#turn.computer {
+    position: absolute;
+    font-size: 2em;
+    right: 0;
+    bottom: 80%;
+    transition: all 500ms;
+}
